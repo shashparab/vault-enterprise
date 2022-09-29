@@ -6,6 +6,7 @@ resource "vault_identity_group" "internal_group_readonly" {
   name             = "${each.value.heritage}-${each.value.csp}-${each.value.asset_id}-readonly"
   type             = "internal"
   member_group_ids = [vault_identity_group.external_group_readonly[each.key].id]
+  member_entity_ids = [vault_identity_entity.appid_vault_entity[each.key].id]
   policies         = ["kv-${each.value.asset_id}-readonly"]
   metadata = {
     asset_id = each.value.asset_id

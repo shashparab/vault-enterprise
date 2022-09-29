@@ -11,12 +11,12 @@ variable "gitlab_jwt_path" {
   default = "gitlab_jwt"
 }
 
-variable "gitlab_runner_default_policy" {
-  type    = string
-  default = "gitlab_runner_default_policy"
-}
+# variable "gitlab_runner_default_policy" {
+#   type    = string
+#   default = "gitlab_runner_default_policy"
+# }
 
-variable "gitlab_runner_jwt_role" {
-  type    = string
-  default = "gitlab_runner_jwt_role"
-}
+# variable "gitlab_runner_jwt_role" {
+#   type    = string
+#   default = "gitlab_runner_jwt_role"
+# }
